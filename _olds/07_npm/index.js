@@ -1,0 +1,39 @@
+
+const express = require('express')
+const app = express()
+const port = 3001;
+
+const path = require('path')
+
+const basePath = path.join(__dirname,'templates')
+
+var checkAuth = function(req,res,next) {
+    req.authStatus = true
+    if (req.authStatus) {
+        console.log('Está logado, pode continuar')
+        next()
+    } else {
+        console.log('Não está logado, faça o login para continuar!')
+        res.status(401).send('Acesso negado. Faça login para continuar.')
+    }
+}
+
+app.use(checkAuth)
+
+app.get('/users/:id', (req,res) =>{
+    console.log(`Carregando usuário: ${req.params.id}`)
+
+    res.sendFile(`${basePath}/users.html`)
+})
+
+app.get('/',(req,res) =>{
+    res.sendFile(`${basePath}/index.html`)
+})
+
+app.get('/',(req,res) =>{
+    res.send('Olá Mundo!');
+})
+
+app.listen(port,() => {
+    console.log(`App rodando na porta ${port}`)
+})
