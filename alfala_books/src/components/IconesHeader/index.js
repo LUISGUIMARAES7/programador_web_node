@@ -1,6 +1,12 @@
-import './style.css'
 import perfil from '../../img/perfil.svg';
 import sacola from '../../img/sacola.svg';
+// import styled from 'styled-components';
+
+// const IconeStyle = styled.s`
+//   display: flex;
+//   align-items: center;
+//   gap: 40px;
+// `
 
 const icones = [perfil, sacola];
 
@@ -13,6 +19,7 @@ function IconesHeader (){
             </li>
           ))}
         </ul>
+       
     )
 }
 

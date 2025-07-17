@@ -1,14 +1,15 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
 
-.App {
-  width: 100vw;
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
   height: 100vh;
-  background: linear-gradient(90deg, #cfe5f5 35%, #8acaf8 165%);
+  width: 100vw;
 }
 
-li {
-  list-style: none;
-}
+
+
+

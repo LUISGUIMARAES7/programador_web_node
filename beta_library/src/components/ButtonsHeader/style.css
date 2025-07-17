@@ -1,0 +1,21 @@
+.buttonsHeader {
+  display: flex;
+  gap: 10px;
+}
+
+.button  {
+  padding: 8px 16px;
+  background-color: #fd9800;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: #f8b754;
+}
+

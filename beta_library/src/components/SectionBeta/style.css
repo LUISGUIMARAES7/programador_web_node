@@ -1,0 +1,11 @@
+.livros {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.livros img {
+    height: 500px;
+    width: auto;
+    cursor: pointer;
+}
