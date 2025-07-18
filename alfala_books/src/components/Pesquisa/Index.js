@@ -41,28 +41,43 @@ const Resultado = styled.div`
 `
 
 function Pesquisa() {
-    const [livrosPesquisados, setLivrosPesquisados] = useState([])
-    console.log(livrosPesquisados)
+    const [termoBusca, setTermoBusca] = useState('');
+    const [livrosPesquisados, setLivrosPesquisados] = useState([]);
+
+    const handleInputChange = (evento) => {
+        const texto = evento.target.value;
+        setTermoBusca(texto);
+
+        if (!texto.trim()) {
+            setLivrosPesquisados([]);
+            return;
+        }
+
+        const resultado = livros.filter(livro =>
+            livro.nome.toLowerCase().includes(texto.toLowerCase())
+        );
+        setLivrosPesquisados(resultado);
+    };
+
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre seu livro em nossa estante</Subtitulo>
-            <Input placeholder="Escreva sua próxima leitura"
-                onBlur={evento => {
-                    const textoDigitado = evento.target.value;
-                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado));
-                    setLivrosPesquisados(resultadoPesquisa);
-                }}
+
+            <Input
+                placeholder="Escreva sua próxima leitura"
+                value={termoBusca}
+                onChange={handleInputChange}
             />
-            {livrosPesquisados.map(livro => (
-                <Resultado>
+
+            {livrosPesquisados.map((livro, index) => (
+                <Resultado key={`${livro.nome}-${index}`}>
                     <p>{livro.nome}</p>
-                    <img src={livro.src} />
+                    <img src={livro.src} alt={`Capa do livro ${livro.nome}`} />
                 </Resultado>
             ))}
-
         </PesquisaContainer>
-    )
+    );
 }
 
 export default Pesquisa;
