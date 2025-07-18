@@ -1,15 +1,31 @@
-import './style.css';
+import styled from 'styled-components';
+
+const Div = styled.div`
+    display: flex;
+    gap: 30px;
+`;
+
+const LinkNav = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: #3E322C;
+  font-size: 2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const textoNav = ['INÍCIO', 'CATÁLOGO', 'SOBRE'];
 
 
 function NavHeader() {
     return (
-        <div className='nav-header'>
+        <Div>
             {textoNav.map((texto) => (
-                <a href="#" className='nav'>{texto}</a>
+                <LinkNav href="#" className='nav'>{texto}</LinkNav>
             ))}
-        </div>
+        </Div>
     )
 }
 

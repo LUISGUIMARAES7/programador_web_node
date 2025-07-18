@@ -1,11 +1,22 @@
 import logo from '../../img/logo.svg';
-import './style.css';
+import styled from 'styled-components';
+
+const Div = styled.div`
+    .logo {
+    display: flex;  
+    }
+
+    img {
+        height: 100px;
+        width: auto;
+    }
+`;
 
 function Logo(){
     return (
-        <div className='logo'>
+        <Div className='logo'>
             <img src={logo} alt='logo book' />
-        </div>
+        </Div>
     )
 }
 

@@ -1,28 +1,27 @@
 import styled from 'styled-components';
-import Input from '../Input';
 import { useState } from 'react';
 import { livros } from './dadosPesquisa';
 
 
 const PesquisaContainer = styled.section`
-    background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
-    color: #FFF;
+    // background-image: linear-gradient(180deg, #FFF8F0, #F5EBD8, #EADAC1);
     text-align: center;
     padding: 85px 0;
-    height: 470px;
+    height: auto;
     width: 100%;
-`
+`;
 const Titulo = styled.h2`
-    color: #FFF;
+    color: #3E322C;
     font-size: 36px;
     text-align: center;
     width: 100%;
-`
+`;
 const Subtitulo = styled.h3`
-    font-size: 16px;
+    color: #3E322C;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 40px;
-`
+`;
 const Resultado = styled.div`
    display: flex;
    justify-content: center;
@@ -35,10 +34,26 @@ const Resultado = styled.div`
    img {
        width: 100px;
    }
-&:hover {
-       border: 1px solid white;
+    &:hover {
+       border: 1px solid grey;
    }
-`
+`;
+
+const Input = styled.input`
+background: transparent;
+border: 1px solid grey;
+padding: 20px 140px;
+border-radius: 50px;
+width: 200px;
+color: #3E322C;
+font-size: 16px;
+margin-bottom: 30px;
+
+&::placeholder {
+    color:rgba(62, 50, 44, 0.5);
+    font-size: 16px;
+}
+`;
 
 function Pesquisa() {
     const [termoBusca, setTermoBusca] = useState('');
@@ -61,8 +76,8 @@ function Pesquisa() {
 
     return (
         <PesquisaContainer>
-            <Titulo>Já sabe por onde começar?</Titulo>
-            <Subtitulo>Encontre seu livro em nossa estante</Subtitulo>
+            <Titulo>Beta Library - sua biblioteca digital moderna</Titulo>
+            <Subtitulo>Encontre seu livro</Subtitulo>
 
             <Input
                 placeholder="Escreva sua próxima leitura"
