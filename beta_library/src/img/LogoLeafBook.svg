@@ -1,0 +1,12 @@
+<svg width="180" height="50" viewBox="0 0 180 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nome estilizado -->
+  <text x="0" y="35" font-family="Georgia, serif" font-size="28" fill="#3E322C" letter-spacing="2">
+    Leaf
+  </text>
+  <text x="80" y="35" font-family="Georgia, serif" font-size="28" fill="#B08968" letter-spacing="2">
+    Book
+  </text>
+
+  <!-- Pequeno detalhe: sublinhado artístico -->
+  <line x1="0" y1="38" x2="160" y2="38" stroke="#DDB892" stroke-width="3" stroke-linecap="round"></line>
+</svg>

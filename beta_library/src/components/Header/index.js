@@ -1,4 +1,4 @@
-import Logo from '../LogoBeta';
+import Logo from '../Logo';
 import NavHeader from '../NavHeader';
 import ButtonsHeader from '../ButtonsHeader';
 import styled from 'styled-components';

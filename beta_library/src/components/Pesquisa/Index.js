@@ -4,10 +4,9 @@ import { livros } from './dadosPesquisa';
 
 
 const PesquisaContainer = styled.section`
-    // background-image: linear-gradient(180deg, #FFF8F0, #F5EBD8, #EADAC1);
     text-align: center;
     padding: 85px 0;
-    height: auto;
+    height: 100%;
     width: 100%;
 `;
 const Titulo = styled.h2`
@@ -76,7 +75,7 @@ function Pesquisa() {
 
     return (
         <PesquisaContainer>
-            <Titulo>Beta Library - sua biblioteca digital moderna</Titulo>
+            <Titulo>Leaf Book - sua biblioteca digital moderna</Titulo>
             <Subtitulo>Encontre seu livro</Subtitulo>
 
             <Input
