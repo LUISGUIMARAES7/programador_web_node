@@ -1,6 +1,6 @@
 import livro from "../../img/livro.png";
-import livro4 from "../../img/livro4.png";
 import livro3 from "../../img/livro3.png";
+import livro4 from "../../img/livro4.png";
 import livro5 from "../../img/livro5.png";
 import livro6 from "../../img/livro6.png";
 

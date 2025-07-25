@@ -26,13 +26,27 @@ const Resultado = styled.div`
    justify-content: center;
    align-items: center;
    margin-bottom: 20px;
-   cursor: pointer;
+//    cursor: pointer;
    p {
        width: 200px;
    }
    img {
        width: 100px;
    }
+    &:hover {
+       border: 1px solid grey;
+   }
+`;
+
+const Itens = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    gap: 20px;
+
     &:hover {
        border: 1px solid grey;
    }
@@ -84,12 +98,21 @@ function Pesquisa() {
                 onChange={handleInputChange}
             />
 
-            {livrosPesquisados.map((livro) => (
+            {/* {livrosPesquisados.map((livro) => (
                 <Resultado key={`${livro.id}`}>
                     <p>{livro.nome}</p>
                     <img src={livro.src} alt={`Capa do livro ${livro.nome}`} />
                 </Resultado>
-            ))}
+            ))} */
+                <Resultado>
+                    {livrosPesquisados.map((livro) => (
+                        <Itens key={livro.id}>
+                            <p>{livro.nome}</p>
+                            <img src={livro.src} alt={`Capa do livro ${livro.nome}`} />
+                        </Itens>
+                    ))}
+                </Resultado>
+            }
         </PesquisaContainer>
     );
 }
