@@ -6,6 +6,8 @@ app.use(express.json())
 
 const port = 6000
 
+
+// Montagem da rota livro 
 app.use('/lojalivros', routerLivros);
 
 app.listen(port, () => {

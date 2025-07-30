@@ -49,6 +49,21 @@ export const postLivro = (req, res) => {
 };
 
 
+// export const postLivro = (req, res) => {
+//     try {
+//         const livroNovo = req.body;
+//         if (req.body.nome) {
+//             insereLivro(livroNovo);
+//             res.status(201).json(livroNovo);
+//         } else {
+//             res.status(422)
+//             res.send("O campo nome é obrigatório")
+//         }
+//     } catch (error) {
+//         res.status(500).send(error.message);
+//     }
+// }
+
 export const patchLivro = (req, res) => {
     try {
         const id = req.params.id
