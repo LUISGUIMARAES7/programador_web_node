@@ -2,11 +2,12 @@ import fs from 'fs'
 
 function getTodosLivros() {
     return JSON.parse(fs.readFileSync("data/livros.json"))
+    // return fs.readFileSync("data/livros.json")
 }
 
 function getLivroPorId(id) {
     const livros = JSON.parse(fs.readFileSync("data/livros.json"))
-    const livroFiltrado = livros.filter(livro => livro.id === id)[0]
+    const livroFiltrado = livros.filter(livro => Number(livro.id) === Number(id))[0]
     return livroFiltrado
 }
 
